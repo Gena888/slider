@@ -1,0 +1,39 @@
+.carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.items-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+}
+
+.item {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.active, .next {
+    display: block;
+}
+
+/* 
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  } */
+
+.item img {
+    height: 400px;
+}
