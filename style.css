@@ -20,7 +20,7 @@
     position: relative;
     animation: 0.5s ease-in-out;
     margin: 0 auto;
-    padding: 5px;
+    padding: 0 5px;
 }
 
 .active, .next {
@@ -36,4 +36,76 @@
 
 .item img {
     height: 400px;
+}
+
+.control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5%;
+    cursor: pointer;
+}
+
+.control.left {
+    left: 0;
+    right: auto;
+}
+
+.control.right {
+    right: 0;
+    left: auto;
+}
+
+.arrow {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+
+.arrow.right {
+    right: 50%;
+}
+
+/* animation  */
+
+.to-left {
+    animation-name: left;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+        /* opacity: 100%; */
+    }
+    to {
+        left: -100%;
+        /* opacity: 0% */
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+        /* opacity: 0%; */
+    }
+    to {
+        left: 0;
+        /* opacity: 100%; */
+    }
 }
