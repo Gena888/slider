@@ -1,15 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+}
 .carousel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
 }
 
 .items-view {
     position: relative;
-    width: 90%;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
@@ -28,40 +27,17 @@
     animation: 0.5s ease-in-out;
     margin: 0 auto;
     padding: 0 5px;
-    
 }
 
 /* 278 */
+
 .item img {
     height: 399px;
 }
 
-.control {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 5%;
-    cursor: pointer;
-}
-
-.control.left {
-    left: 0;
-    right: auto;
-}
-
-.control.right {
-    right: 0;
-    left: auto;
-}
-
 .arrow {
+    padding: 30px;
     display: inline-block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 40px;
-}
-
-.arrow.right {
-    right: 50%;
+    cursor: pointer;
 }
