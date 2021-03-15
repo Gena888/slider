@@ -7,37 +7,32 @@
     transform: translate(-50%, -50%);
 }
 
-.items-container {
+.items-view {
     position: relative;
     width: 90%;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
+    width: 1152px;
+}
+
+.items-line {
+    position: relative;
+    display: flex;
+    left: 0;
 }
 
 .item {
-    display: none;
     position: relative;
     animation: 0.5s ease-in-out;
     margin: 0 auto;
     padding: 0 5px;
-}
-
-.active, .next {
-    display: block;
-}
-
-
-.next {
-    /* position: absolute;
-    top: 0;
-    width: 100%; */
     
-  
-  }
+}
 
+/* 278 */
 .item img {
-    height: 400px;
+    height: 399px;
 }
 
 .control {
@@ -68,46 +63,4 @@
 
 .arrow.right {
     right: 50%;
-}
-
-/* animation  */
-
-.to-left {
-    animation-name: left;
-}
-
-.from-right {
-    animation-name: right;
-}
-
-.to-right {
-    animation-name: right;
-    animation-direction: reverse;
-}
-
-.from-left {
-    animation-name: left;
-    animation-direction: reverse;
-}
-
-@keyframes left {
-    from {
-        left: 0;
-        /* opacity: 100%; */
-    }
-    to {
-        left: -100%;
-        /* opacity: 0% */
-    }
-}
-
-@keyframes right {
-    from {
-        left: 100%;
-        /* opacity: 0%; */
-    }
-    to {
-        left: 0;
-        /* opacity: 100%; */
-    }
 }
