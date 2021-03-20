@@ -3,6 +3,7 @@ let line = document.querySelector('.items-line')
 let leftBtn = document.querySelector('.control.left')
 let rightBtn = document.querySelector('.control.right')
 let offset = 0
+let currentRageValue
 let rage = document.querySelector('.rage-input')
 
 leftBtn.addEventListener('click', function () {
@@ -26,28 +27,20 @@ rightBtn.addEventListener('click', function () {
     }
 })
 
-let currentValue
+
 
 rage.addEventListener('pointerdown', (e) => {
-    currentValue = e.target.value
-
-    // console.log(`currentValue = ${currentValue}`)
-    console.log('mousedown')
-
-
-
+    currentRageValue = e.target.value
 })
 
 rage.addEventListener('pointerup', (e) => {
-    // debugger
     let addOffset = (value) => {
-        if (value > currentValue) {
-            // debugger
-            for (i = currentValue; i < value; i++) {
+        if (value > currentRageValue) {
+            for (i = currentRageValue; i < value; i++) {
                 offset = offset - 288
             }
-        } else if (value < currentValue) {
-            for (i = currentValue; i > value; i--) {
+        } else if (value < currentRageValue) {
+            for (i = currentRageValue; i > value; i--) {
                 offset = offset + 288
             }
         } else {
@@ -55,8 +48,5 @@ rage.addEventListener('pointerup', (e) => {
         }
     }
     addOffset(e.target.value)
-
     line.style.left = `${offset}px`
-
-
 })
