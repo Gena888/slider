@@ -2,7 +2,12 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .carousel {
+    display: flex;
+    flex-direction: column;
+}
+.carousel_withBtns {
     display: flex;
     align-items: center;
 }
